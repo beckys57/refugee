@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+		<ul class="max">
+	{% for level in levels %}
+			<a href="{% url 'listings:category_listings' category.id %}?level={{level.id}}"><li>
+				{{level|capfirst}}
+			</li></a>
+		
+	{% endfor %}
+			<a href="{% url 'listings:category_listings' category.id %}?level=u"><li>
+				I don't know my level
+			</li></a>
+			<a href="{% url 'listings:category_listings' category.id %}"><li>
+				Show all
+			</li></a>
+
+		</ul>
+
+{% endblock content %}

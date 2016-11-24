@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+	<select style="padding: 0.5em;font-size: 1em;display:block;margin:0.5em auto 1em;text-align:center;width: 250px;"><option>English</option></select>
+	<div class="box-wrap">
+
+			<div class="square">
+				<a class="filler" href="{% url 'listings:select_level' categories.0.id %}"></a>
+				<img class="icon" src="{% static "img/english.png" %}">
+				English
+			</div>
+			<div class="square">
+				<a class="filler" href="{% url 'listings:select_level' categories.1.id %}"></a>
+				<img class="icon" src="{% static "img/maths.png" %}">
+				Maths
+			</div>
+			<div class="square">
+				<a class="filler" href="{% url 'listings:select_level' categories.2.id %}"></a>
+				<img class="icon" src="{% static "img/laptop.png" %}">
+				Computers
+			</div>
+			<div class="square">
+				<a class="filler" href="{% url 'listings:select_level' categories.3.id %}"></a>
+				<img class="icon" src="{% static "img/work.png" %}">
+				Work
+			</div>
+	</div>
+{% endblock content %}

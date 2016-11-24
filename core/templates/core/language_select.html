@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<ul class="max">
+		{% for language in languages %}
+			<a href="{% url 'core:category_select' %}"><li class="txt-center color-3">
+				{{language.english_name}}
+			</li></a>
+		{% endfor %}
+	</ul>
+{% endblock content %}
